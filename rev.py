@@ -1,2 +1,3 @@
 def reverse_list(aList):
-    aList.reverse()
+	aList.reverse()
+	return aList

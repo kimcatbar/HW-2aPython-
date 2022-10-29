@@ -1,12 +1,16 @@
-from time import time 
+import time 
 
-def timeme(func):#define decorator functio 
-	def wrapper(time1,time2):#insinde of wrapper actaully does something
-		t0=time.time()
-		call_func = func(time1,time2)
-		t1=time.time()
-		print (f"Total time {(t1-t0)}")
-		return call_func 
-	return wrapper
-
-
+def timer_func(func):
+    def wrapper():
+        t1 = time.time()
+        func()
+        t2 = time.time()
+        print(f'Total time {(t2-t1)}')
+    return wrapper
+  
+@timer_func #this in leu of calling test_time = ........
+def test_time():
+   time.sleep(2)
+   
+#test_time = timer_func(test_time)
+test_time()

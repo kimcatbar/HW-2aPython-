@@ -1,0 +1,5 @@
+1. after increment_int_a is called, the variable does not change and stays as its original value. 
+
+2. after increment_int_b is called, the varaible inside b[0] does change and is incremented by 1. 
+
+3. this is so becuase integers are immutable objects and are pass by value. the value of them is passed, but not the actual varaible. lists are pass by refernce, meaning that changed made within the function are present in the original list. 

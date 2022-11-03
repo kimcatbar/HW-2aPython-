@@ -1,3 +1,3 @@
 def reverse_list(aList):
-	aList.reverse()
-	return aList
+	reverse_list = aList[::-1]
+	return reverse_list
